@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in — Zerqo</title>
+<meta name="description" content="Sign in to Zerqo with a one-time code sent to your email or phone.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<main class="sheet">
+  <span class="sheet__bar" aria-hidden="true"><i id="bar" style="width:34%"></i></span>
+
+  <a class="sheet__x" href="../index.html" aria-label="Close and go back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </a>
+
+  <!-- ---------------- step 1: where to send it ---------------- -->
+  <div class="step on" data-step="ask">
+    <p class="sheet__eye"><i aria-hidden="true"></i> Student sign in</p>
+
+    <h1>Pick up where<br><span>you left off.</span></h1>
+    <p class="sheet__sub">No password needed. We'll send a 6-digit code to your email or phone.</p>
+
+    <div class="seg" role="tablist" aria-label="Send the code to">
+      <button class="on" type="button" data-mode="email" role="tab" aria-selected="true">
+        <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+        Email
+      </button>
+      <button type="button" data-mode="phone" role="tab" aria-selected="false">
+        <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+        Phone
+      </button>
+    </div>
+
+    <form id="ask" novalidate>
+      <div class="fld" data-field="email">
+        <label>
+          <span>Email address</span>
+          <input type="email" name="email" autocomplete="email" inputmode="email"
+                 placeholder="Where can we reach you?">
+          <span class="fld__hint">Use the email you signed up with.</span>
+        </label>
+      </div>
+
+      <div class="fld" data-field="phone" hidden>
+        <label>
+          <span>Phone number</span>
+          <span class="phone">
+            <span class="cc">+91</span>
+            <input type="tel" name="phone" autocomplete="tel-national" inputmode="numeric"
+                   maxlength="10" placeholder="98765 43210">
+          </span>
+          <span class="fld__hint">We'll text your code. Standard rates apply.</span>
+        </label>
+      </div>
+
+      <p class="fld__err" data-err="ask">Enter a valid email address.</p>
+
+      <button class="go" type="submit">
+        Send my code
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+
+    <div class="or">or</div>
+    <a class="go go--ghost" href="signup.html">Create a new account</a>
+
+    <p class="legal">By continuing, you agree to Zerqo's <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+  </div>
+
+  <!-- ---------------- step 2: the code ---------------- -->
+  <div class="step" data-step="otp">
+    <p class="sheet__eye"><i aria-hidden="true"></i> Verify</p>
+
+    <h1>Enter your<br><span>6-digit code.</span></h1>
+    <p class="sheet__sub">It's valid for the next 10 minutes.</p>
+
+    <div class="sent">
+      <span>Sent to <b id="sentTo">aarav@example.com</b></span>
+      <button type="button" id="change">Change</button>
+    </div>
+
+    <form id="verify" novalidate>
+      <div class="otp" id="otp" role="group" aria-label="6 digit code">
+        <input type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1">
+        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+        <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+      </div>
+
+      <p class="fld__err" data-err="otp">That code doesn't look right. Check and try again.</p>
+
+      <div class="resend">
+        <span>Didn't get it?</span>
+        <button type="button" id="resend" disabled>Resend in <span id="tick">30</span>s</button>
+      </div>
+
+      <button class="go" type="submit">
+        Verify and continue
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- ---------------- step 3 ---------------- -->
+  <div class="step" data-step="done">
+    <span class="done__i"><svg viewBox="0 0 24 24"><path d="m4 12 5 5L20 7"/></svg></span>
+
+    <h1>Signed in.<br><span>Welcome back.</span></h1>
+    <p class="sheet__sub">Your streak is intact and your next step is waiting.</p>
+
+    <a class="go" href="../dashboard/index.html">
+      Go to my dashboard
+      <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <a class="go go--ghost" href="../index.html">Back to the site</a>
+  </div>
+</main>
+
+<script src="auth.js" defer></script>
+</body>
+</html>

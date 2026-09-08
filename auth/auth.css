@@ -1,0 +1,287 @@
+/* ================================================================
+   ZERQO AUTH — the same card as the sign-up sheet on the site.
+   ================================================================ */
+
+:root{
+  --bg:#F7F5F2;
+  --card:#FCFAF6;
+  --surface:#FFFFFF;
+  --line:#E6E1DA;
+  --line-2:#EFEAE3;
+
+  --text:#14141C;
+  --text-2:#5F5C68;
+  --text-3:#918D97;
+
+  --brand:#7C8DE7;
+  --brand-deep:#5A6BD4;
+  --brand-tint:#EDEFFC;
+
+  --err:#C0453A;  --err-bg:#FCEDEB;
+  --ok:#2F7D68;   --ok-bg:#EDF7F3;
+
+  --font:"Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+*{margin:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--font);font-size:15px;line-height:1.55;letter-spacing:-.005em;
+  color:var(--text);-webkit-font-smoothing:antialiased;
+  min-height:100svh;display:grid;place-items:center;padding:24px 20px;
+  background:
+    radial-gradient(70% 55% at 50% -10%,rgba(124,141,231,.22),transparent 70%),
+    var(--bg);
+}
+img,svg{display:block;max-width:100%}
+button,input,select{font:inherit;color:inherit;font-family:var(--font)}
+button{background:none;border:0;cursor:pointer}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:none;box-shadow:0 0 0 2px var(--card),0 0 0 4px var(--brand);border-radius:10px}
+
+/* ---------------------------------------------------- the card */
+.sheet{
+  position:relative;width:100%;max-width:620px;
+  background:var(--card);border-radius:22px;
+  padding:clamp(30px,4vw,44px) clamp(24px,4vw,44px) clamp(24px,3vw,34px);
+  box-shadow:0 40px 90px -40px rgba(10,10,20,.42),0 2px 6px rgba(10,10,20,.05);
+  animation:in .4s var(--ease);
+}
+@keyframes in{from{opacity:0;transform:translateY(14px) scale(.99)}}
+
+.sheet__bar{position:absolute;left:0;right:0;top:0;height:4px;border-radius:22px 22px 0 0;overflow:hidden}
+.sheet__bar i{display:block;height:100%;background:var(--brand);border-radius:0 4px 4px 0;
+  transition:width .5s var(--ease)}
+
+.sheet__x{
+  position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;
+  display:grid;place-items:center;background:#fff;border:1px solid var(--line);color:var(--text);
+  transition:border-color .2s var(--ease),transform .3s var(--ease);
+}
+.sheet__x:hover{border-color:var(--text-3);transform:rotate(90deg)}
+
+.sheet__eye{
+  display:inline-flex;align-items:center;gap:9px;margin-bottom:18px;
+  font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brand-deep);
+}
+.sheet__eye i{width:9px;height:9px;border-radius:50%;background:var(--brand);flex:none}
+
+.sheet h1{
+  font-size:clamp(30px,2rem + 2.2vw,46px);font-weight:800;letter-spacing:-.045em;line-height:1.04;
+  margin-bottom:14px;
+}
+.sheet h1 span{color:var(--brand)}
+.sheet__sub{font-size:15px;color:var(--text-2);line-height:1.55;max-width:44ch;margin-bottom:26px}
+
+/* ---------------------------------------------------- fields */
+.fld{display:grid;gap:14px;margin-bottom:16px}
+.fld--2{grid-template-columns:1fr 1fr}
+.fld label{display:block}
+.fld label > span{display:block;font-size:13px;font-weight:700;margin-bottom:8px}
+.fld input,.fld select{
+  width:100%;padding:14px 16px;border-radius:11px;font-size:15px;
+  background:#fff;border:1px solid var(--line);color:var(--text);
+  transition:border-color .2s var(--ease),box-shadow .2s var(--ease);
+}
+.fld input::placeholder{color:#A8A3AC}
+.fld select{
+  appearance:none;cursor:pointer;padding-right:42px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%235F5C68' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 15px center;
+}
+.fld input:focus,.fld select:focus{outline:none;border-color:var(--brand);
+  box-shadow:0 0 0 4px rgba(124,141,231,.18)}
+.fld input[aria-invalid="true"],.fld select[aria-invalid="true"]{border-color:var(--err);background:var(--err-bg)}
+.fld__hint{display:block;font-size:12.5px;color:var(--text-3);margin-top:8px}
+.fld__err{display:none;font-size:13px;font-weight:600;color:var(--err);margin:-8px 0 14px}
+.fld__err.on{display:block}
+
+/* phone prefix */
+.phone{display:flex;gap:8px}
+.phone .cc{display:flex;align-items:center;padding:0 14px;border-radius:11px;flex:none;
+  background:#fff;border:1px solid var(--line);font-size:15px;font-weight:700;color:var(--text-2)}
+.phone input{flex:1}
+
+/* segmented email / phone */
+.seg{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:99px;
+  background:#F1EDE7;margin-bottom:22px}
+.seg button{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px;border-radius:99px;font-size:13.5px;font-weight:700;color:var(--text-2);
+  transition:background-color .2s var(--ease),color .2s var(--ease),box-shadow .2s var(--ease);
+}
+.seg button svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
+.seg button.on{background:#fff;color:var(--text);box-shadow:0 1px 3px rgba(20,20,28,.14)}
+
+/* otp */
+.otp{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-bottom:8px}
+.otp input{
+  width:100%;aspect-ratio:1;text-align:center;font-size:22px;font-weight:800;
+  border-radius:12px;background:#fff;border:1px solid var(--line);
+  font-variant-numeric:tabular-nums;
+  transition:border-color .2s var(--ease),box-shadow .2s var(--ease),background-color .2s var(--ease);
+}
+.otp input:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 4px rgba(124,141,231,.18)}
+.otp input.filled{border-color:var(--brand);background:var(--brand-tint)}
+.sent{display:flex;align-items:center;gap:10px;padding:13px 15px;border-radius:11px;
+  background:var(--brand-tint);font-size:13.5px;margin-bottom:20px}
+.sent b{font-weight:700}
+.sent button{margin-left:auto;font-size:13px;font-weight:700;color:var(--brand-deep)}
+.resend{display:flex;align-items:center;justify-content:space-between;gap:12px;
+  font-size:13px;color:var(--text-3);margin-top:16px}
+.resend button{font-weight:700;color:var(--brand-deep)}
+.resend button[disabled]{color:var(--text-3);cursor:default}
+
+/* ---------------------------------------------------- actions */
+.go{
+  display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  margin-top:22px;padding:17px 24px;border-radius:99px;
+  background:var(--brand);color:#fff;font-size:15px;font-weight:700;
+  box-shadow:0 12px 26px -14px rgba(124,141,231,1);
+  transition:transform .25s var(--ease),background-color .2s var(--ease);
+}
+.go:hover{background:var(--brand-deep);transform:translateY(-1px)}
+.go svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2.4;
+  stroke-linecap:round;stroke-linejoin:round;transition:transform .25s var(--ease)}
+.go:hover svg{transform:translateX(3px)}
+.go--ghost{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:none;margin-top:12px}
+.go--ghost:hover{background:#fff;border-color:var(--brand);color:var(--brand-deep)}
+
+.legal{font-size:12.5px;color:var(--text-3);margin-top:16px;line-height:1.6}
+.legal a{color:var(--text-2);text-decoration:underline;text-underline-offset:2px}
+.swap{font-size:13.5px;color:var(--text-2);margin-top:20px;padding-top:18px;
+  border-top:1px solid var(--line-2);text-align:center}
+.swap a{color:var(--brand-deep);font-weight:700}
+
+.or{display:flex;align-items:center;gap:14px;margin:20px 0 0;color:var(--text-3);font-size:12.5px}
+.or::before,.or::after{content:"";flex:1;height:1px;background:var(--line-2)}
+
+/* ---------------------------------------------------- steps */
+.step{display:none}
+.step.on{display:block;animation:in .35s var(--ease)}
+
+.done__i{width:56px;height:56px;border-radius:50%;margin-bottom:20px;display:grid;place-items:center;
+  background:var(--ok-bg);color:var(--ok)}
+.done__i svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:3;
+  stroke-linecap:round;stroke-linejoin:round}
+
+@media (max-width:560px){
+  .fld--2{grid-template-columns:1fr}
+  .sheet{padding-top:40px}
+  .otp{gap:7px}
+  .otp input{font-size:18px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:.01ms!important}
+}
+
+/* ---------------- matched to the reference card ---------------- */
+.sheet h1{
+  font-family:"Fraunces",Georgia,serif;
+  font-weight:600;font-variation-settings:"opsz" 120;
+  font-size:clamp(34px,2.2rem + 2.4vw,52px);
+  letter-spacing:-.02em;line-height:1.02;margin-bottom:16px;
+}
+.sheet h1 span{color:var(--brand-deep)}
+.sheet__eye{letter-spacing:.13em}
+.sheet__sub{margin-bottom:30px}
+
+/* the primary action is the black pill from the reference */
+.go{background:var(--text);color:#fff;
+  box-shadow:0 1px 2px rgba(20,20,28,.3),0 14px 28px -16px rgba(20,20,28,.9)}
+.go:hover{background:#2A2A34}
+.go--ghost{background:#fff;color:var(--text);border:1px solid var(--line);box-shadow:none}
+.go--ghost:hover{background:#fff;border-color:var(--brand);color:var(--brand-deep)}
+
+.fld{margin-bottom:18px}
+.fld label > span{font-size:13.5px;margin-bottom:9px}
+.fld input,.fld select{padding:15px 16px;border-radius:10px}
+
+/* ---------------- fit the viewport instead of scrolling ---------------- */
+body{padding:16px}
+.sheet{max-height:calc(100svh - 32px);overflow-y:auto;overscroll-behavior:contain;
+  scrollbar-width:thin;scrollbar-color:#D8D3CB transparent}
+.sheet::-webkit-scrollbar{width:8px}
+.sheet::-webkit-scrollbar-thumb{background:#D8D3CB;border-radius:99px;border:2px solid var(--card)}
+.sheet::-webkit-scrollbar-track{background:transparent}
+
+@media (max-height:800px){
+  .sheet{padding:34px clamp(24px,3.6vw,40px) 26px}
+  .sheet h1{font-size:clamp(32px,5.2vh,46px);margin-bottom:12px}
+  .sheet__eye{margin-bottom:12px}
+  .sheet__sub{font-size:14.5px;margin-bottom:24px}
+  .fld{margin-bottom:13px}
+  .fld label > span{margin-bottom:6px;font-size:13px}
+  .fld input,.fld select{padding:12px 15px}
+  .go{margin-top:16px;padding:14px 22px}
+  .legal{margin-top:12px}
+  .swap{margin-top:14px;padding-top:14px}
+  .seg{margin-bottom:16px}
+  .seg button{padding:9px}
+  .otp input{font-size:19px}
+  .sent{padding:11px 13px;margin-bottom:14px}
+}
+
+@media (max-height:680px){
+  .sheet{padding:24px clamp(20px,3vw,32px) 20px}
+  .sheet h1{font-size:clamp(24px,4vh,32px);margin-bottom:8px}
+  .sheet__eye{margin-bottom:10px;font-size:11px}
+  .sheet__sub{font-size:13.5px;margin-bottom:16px;line-height:1.5}
+  .fld{margin-bottom:11px}
+  .fld input,.fld select{padding:11px 14px;font-size:14.5px}
+  .go{margin-top:14px;padding:13px 20px;font-size:14.5px}
+  .sheet__x{top:14px;right:14px;width:34px;height:34px}
+  .legal{font-size:12px}
+}
+
+/* ---------------- one rectangle for both pages ---------------- */
+.sheet{min-height:min(780px,calc(100svh - 32px));display:flex;flex-direction:column}
+.step{flex:1;min-height:0}
+.step.on{display:flex;flex-direction:column}
+.step > form{flex:none}
+.swap{margin-top:auto}
+.legal{margin-bottom:0}
+
+@media (max-height:800px){.sheet{min-height:min(700px,calc(100svh - 32px))}}
+@media (max-height:680px){.sheet{min-height:0}}
+
+/* narrower, tighter card */
+.sheet{max-width:520px}
+.legal{margin-bottom:14px}
+.sheet__sub{max-width:38ch}
+@media (max-height:800px){.sheet{max-width:500px}}
+
+/* ---------------- tighter still ---------------- */
+.sheet{
+  max-width:458px;
+  min-height:min(660px,calc(100svh - 32px));
+  padding:30px 30px 24px;
+  border-radius:20px;
+}
+.sheet__x{top:15px;right:15px;width:34px;height:34px}
+.sheet__eye{font-size:11px;margin-bottom:12px}
+.sheet h1{font-size:clamp(28px,4.6vh,38px);margin-bottom:10px}
+.sheet__sub{font-size:14px;margin-bottom:20px;max-width:36ch;line-height:1.5}
+.fld{margin-bottom:13px;gap:12px}
+.fld label > span{font-size:12.5px;margin-bottom:6px}
+.fld input,.fld select{padding:12px 14px;font-size:14.5px;border-radius:10px}
+.go{margin-top:16px;padding:14px 20px;font-size:14.5px}
+.legal{font-size:12px;margin-top:12px;margin-bottom:10px}
+.swap{font-size:13px;padding-top:14px}
+.seg{margin-bottom:16px}
+.seg button{padding:9px;font-size:13px}
+.otp{gap:8px}
+.sent{padding:11px 13px;font-size:13px;margin-bottom:16px}
+@media (max-height:800px){
+  .sheet{max-width:440px;min-height:min(600px,calc(100svh - 32px));padding:26px 26px 20px}
+  .sheet h1{font-size:clamp(26px,4.2vh,34px)}
+  .sheet__sub{margin-bottom:18px}
+}
+
+/* no visible scrollbar on the card */
+.sheet{scrollbar-width:none;-ms-overflow-style:none}
+.sheet::-webkit-scrollbar{display:none;width:0;height:0}

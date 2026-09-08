@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zerqo — Learn with direction. Improve with evidence.</title>
+<meta name="description" content="Zerqo helps Class 9 and Class 10 students learn concepts, practise topic by topic, understand their performance, and know what to do next.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+
+<script>document.documentElement.classList.add("js");</script>
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div class="prog" aria-hidden="true"><i></i></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <div class="container">
+    <div class="nav__in">
+      <a class="brand" href="#top"><span class="brand__m" aria-hidden="true">Z</span> zerqo</a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#parents">For parents</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__act">
+        <a class="signin nav__cta" href="auth/login.html" data-signin>Sign in</a>
+        <a class="btn btn--ink btn--sm nav__cta" href="auth/signup.html" data-join>Start learning
+          <svg class="btn__a" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <button class="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="navover" id="menu">
+  <a href="#how">How it works</a>
+  <a href="#parents">For parents</a>
+  <a href="#faq">FAQ</a>
+  <a href="auth/login.html" data-signin>Sign in</a>
+  <a class="btn btn--ink" href="auth/signup.html" data-join>Start learning</a>
+</div>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="container hero__grid">
+
+      <div class="hero__copy">
+        <p class="hero__eye" data-reveal>For Class 9 &amp; 10</p>
+
+        <h1 data-reveal data-reveal-delay="60">
+          Learn what matters.<br><span class="em">Improve with confidence.</span>
+        </h1>
+
+        <p class="lead" data-reveal data-reveal-delay="130">
+          Most study time goes on deciding what to study. Zerqo reads your results,
+          finds the gap, and puts one thing in front of you.
+        </p>
+
+        <div class="hero__act" data-reveal data-reveal-delay="190">
+          <a class="btn btn--ink btn--lg" href="auth/signup.html" data-join>Start learning
+            <svg class="btn__a" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <a class="tlink" href="#how">See how it works
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <div class="hero__rule" data-reveal data-reveal-delay="250">
+          <p class="hero__meta">
+            <span>Mathematics</span><span>Physics</span><span>Chemistry</span><span>Biology</span>
+          </p>
+          <p class="hero__fine">CBSE, ICSE and State syllabus &middot; free to start</p>
+        </div>
+      </div>
+
+      <figure class="hero__shot" data-reveal data-reveal-delay="150">
+        <img src="assets/img1.webp" width="1920" height="1440" loading="eager" decoding="async"
+             alt="A Class 10 student working through maths problems in a notebook">
+
+        <figcaption class="shotcard">
+          <p class="shotcard__k">Recommended next</p>
+          <div class="shotcard__row">
+            <span class="shotcard__i" aria-hidden="true">C</span>
+            <span class="shotcard__t">
+              <b>Chemical bonding</b>
+              <small>Chemistry &middot; Chapter 3 &middot; 12 min</small>
+            </span>
+          </div>
+        </figcaption>
+      </figure>
+
+    </div>
+  </section>
+
+  <!-- ================= PRODUCT SHOWCASE ================= -->
+  <section class="showcase" aria-label="A look inside Zerqo">
+    <span class="showcase__grid" aria-hidden="true"></span>
+
+    <div class="showcase__tabs" role="tablist" aria-label="Product views">
+      <button class="stab is-active" data-view="dashboard" type="button" role="tab" aria-selected="true"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></i> Dashboard</button>
+      <button class="stab" data-view="subjects" type="button" role="tab" aria-selected="false"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 8h6"/></svg></i> Subjects</button>
+      <button class="stab" data-view="tests" type="button" role="tab" aria-selected="false"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></i> Tests</button>
+      <button class="stab" data-view="analytics" type="button" role="tab" aria-selected="false"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg></i> Analytics</button>
+      <button class="stab" data-view="benchmark" type="button" role="tab" aria-selected="false"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/><path d="M12 13v4M9 21h6"/></svg></i> Benchmark</button>
+    </div>
+
+    <div class="container">
+      <div class="stage" data-reveal>
+        <span class="stage__glow" aria-hidden="true"></span>
+
+        <span class="chip chip--1" aria-hidden="true">
+          <i class="chip__i chip__i--mint"><svg viewBox="0 0 24 24"><path d="m4 12 5 5L20 7"/></svg></i>
+          <span><small>Mathematics</small><b>Topic mastered</b></span>
+        </span>
+
+        <span class="chip chip--2" aria-hidden="true">
+          <i class="chip__i chip__i--brand"><svg viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3z"/></svg></i>
+          <span><small>This week</small><b>+120 mastery</b></span>
+        </span>
+
+        <span class="chip chip--3" aria-hidden="true">
+          <i class="chip__i chip__i--rose"><svg viewBox="0 0 24 24"><path d="M12 3c3 4 6 5.5 6 9a6 6 0 0 1-12 0c0-2 1-3 2-4 .5 1.5 1.5 2 2 2 0-3 1-5 2-7z"/></svg></i>
+          <span><small>Study streak</small><b>23 days</b></span>
+        </span>
+
+        <span class="annot" aria-hidden="true">
+          your next step, chosen for you
+          <svg viewBox="0 0 48 32"><path d="M3 4c14 1 26 9 34 22"/><path d="M31 26c4 1 7 1 8 0M38 17c1 5 1 8 0 9"/></svg>
+        </span>
+
+      <div class="appcard">
+
+        <aside class="appside" aria-hidden="true">
+          <div class="appside__brand"><span class="brand__m">Z</span> zerqo</div>
+          <p class="appside__h">Main</p>
+          <ul class="appnav">
+              <li class="on"><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></i><span>Dashboard</span></li>
+              <li class=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 8h6"/></svg></i><span>Subjects</span><em>4</em></li>
+              <li class=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></i><span>Tests</span><em>2</em></li>
+              <li class=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg></i><span>Analytics</span></li>
+              <li class=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></i><span>Notes</span></li>
+          </ul>
+          <p class="appside__h">Learning</p>
+          <ul class="appnav">
+              <li class=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/><path d="M12 13v4M9 21h6"/></svg></i><span>Benchmark</span><em>1</em></li>
+              <li class=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></i><span>Practice</span></li>
+              <li class=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1"/></svg></i><span>Profile</span></li>
+              <li class=""><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg></i><span>Settings</span></li>
+          </ul>
+          <div class="appside__pro">
+            <b>Go Pro</b>
+            <small>Unlock every chapter test and benchmark.</small>
+            <span class="appside__btn">Upgrade</span>
+          </div>
+        </aside>
+
+        <div class="appmain">
+          <header class="apptop" aria-hidden="true">
+            <span class="appsearch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg> Search chapters, tests, notes&hellip;</span>
+            <span class="apptop__r">
+              <span class="apppill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 5.5 6 9a6 6 0 0 1-12 0c0-2 1-3 2-4 .5 1.5 1.5 2 2 2 0-3 1-5 2-7z"/></svg> 23</span>
+              <span class="appbell"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10.5 21a2 2 0 0 0 3 0"/></svg><em>3</em></span>
+              <span class="appuser"><i>A</i><b>Aarav</b></span>
+            </span>
+          </header>
+
+          <div class="appbody is-on" data-view-panel="dashboard" aria-hidden="true">
+            <div class="appcol">
+              <div class="mhead"><h4>Your progress</h4><span class="mchip">Last 7 days</span></div>
+              <div class="mstats"><div class="mstat mstat--blue"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span><p class="mstat__l">Overall progress</p><p class="mstat__v">74</p><p class="mstat__d up">&#9650; 6 pts this month</p></div><div class="mstat mstat--mint"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></span><p class="mstat__l">Test accuracy</p><p class="mstat__v">87%</p><p class="mstat__d up">&#9650; 8.4% this month</p></div><div class="mstat mstat--sun"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3z"/></svg></span><p class="mstat__l">Mastery score</p><p class="mstat__v">4,250</p><p class="mstat__d up">&#9650; 120 this week</p></div><div class="mstat mstat--rose"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 5.5 6 9a6 6 0 0 1-12 0c0-2 1-3 2-4 .5 1.5 1.5 2 2 2 0-3 1-5 2-7z"/></svg></span><p class="mstat__l">Study streak</p><p class="mstat__v">23 days</p><p class="mstat__d flat">Personal best 31</p></div></div>
+              <div class="mpanel">
+                <div class="mhead mhead--sm"><h4>Topics to focus on</h4><span class="mlink">View all</span></div>
+                <div class="mrow"><span class="mrow__a mrow__a--blue">M</span><span class="mrow__t"><b>Quadratic equations</b><small>Mathematics &middot; Chapter 4</small></span><span class="mtag mtag--rose">Needs revision</span><span class="mrow__s">62%</span><span class="mrow__w">Today</span></div><div class="mrow"><span class="mrow__a mrow__a--mint">C</span><span class="mrow__t"><b>Chemical bonding</b><small>Chemistry &middot; Chapter 3</small></span><span class="mtag mtag--blue">Recommended</span><span class="mrow__s">58%</span><span class="mrow__w">Today</span></div><div class="mrow"><span class="mrow__a mrow__a--sun">P</span><span class="mrow__t"><b>Motion and force</b><small>Physics &middot; Chapter 2</small></span><span class="mtag mtag--mint">Mastered</span><span class="mrow__s">94%</span><span class="mrow__w">Yesterday</span></div><div class="mrow"><span class="mrow__a mrow__a--rose">B</span><span class="mrow__t"><b>Life processes</b><small>Biology &middot; Chapter 6</small></span><span class="mtag mtag--sun">In progress</span><span class="mrow__s">71%</span><span class="mrow__w">2 days ago</span></div>
+              </div>
+            </div>
+            <aside class="appaside">
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Score trend</h4><span class="mchip">5 tests</span></div><div class="mchart">
+                  <svg viewBox="0 0 260 110" role="img" aria-label="Score trend rising to 87 percent">
+                    <defs><linearGradient id="mg1" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7C8DE7" stop-opacity=".28"/>
+                      <stop offset="100%" stop-color="#7C8DE7" stop-opacity="0"/></linearGradient></defs>
+                    <line class="mgrid" x1="0" y1="18" x2="260" y2="18"/>
+                    <line class="mgrid" x1="0" y1="52" x2="260" y2="52"/>
+                    <line class="mgrid" x1="0" y1="86" x2="260" y2="86"/>
+                    <path class="marea" style="fill:url(#mg1)" d="M8 82 L70 68 L132 72 L194 40 L252 22 L252 100 L8 100 Z"/>
+                    <path class="mline" d="M8 82 L70 68 L132 72 L194 40 L252 22"/>
+                    <circle class="mdot" cx="70" cy="68" r="3"/><circle class="mdot" cx="132" cy="72" r="3"/>
+                    <circle class="mdot" cx="194" cy="40" r="3"/><circle class="mdot mdot--last" cx="252" cy="22" r="4.5"/>
+                    <g class="mflag" transform="translate(206,2)"><rect width="46" height="20" rx="6"/>
+                      <text x="23" y="14">87%</text></g>
+                  </svg>
+                  <div class="mx"><span>May 12</span><span>May 26</span><span>Jun 09</span></div>
+                </div></div>
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Insights</h4></div>
+                <p class="mins"><i class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></i> Accuracy improved by 8.4% this month</p>
+                <p class="mins"><i class="warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></i> Chemistry is your weakest subject</p>
+                <p class="mins"><i class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 5.5 6 9a6 6 0 0 1-12 0c0-2 1-3 2-4 .5 1.5 1.5 2 2 2 0-3 1-5 2-7z"/></svg></i> 23-day streak &mdash; four days to a record</p>
+              </div>
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Subject scores</h4><span class="mchip">Avg 74</span></div><div class="mbar"><span>Mathematics</span><i style="--v:92%;--c:#7C8DE7"></i><b>92</b></div><div class="mbar"><span>Physics</span><i style="--v:87%;--c:#9AA6F0"></i><b>87</b></div><div class="mbar"><span>Biology</span><i style="--v:71%;--c:#E0A82E"></i><b>71</b></div><div class="mbar"><span>Chemistry</span><i style="--v:58%;--c:#3F8F7B"></i><b>58</b></div></div>
+            </aside>
+          </div>
+          <div class="appbody" data-view-panel="subjects" aria-hidden="true">
+            <div class="appcol">
+              <div class="mhead"><h4>Your subjects</h4><span class="mchip">Class 10</span></div>
+              <div class="mstats"><div class="mstat mstat--blue"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 8h6"/></svg></span><p class="mstat__l">Mathematics</p><p class="mstat__v">92%</p><p class="mstat__d up">5 chapters &middot; 10 tests</p></div><div class="mstat mstat--rose"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 8h6"/></svg></span><p class="mstat__l">Physics</p><p class="mstat__v">87%</p><p class="mstat__d up">5 chapters &middot; 12 tests</p></div><div class="mstat mstat--sun"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 8h6"/></svg></span><p class="mstat__l">Biology</p><p class="mstat__v">71%</p><p class="mstat__d up">4 chapters &middot; 6 tests</p></div><div class="mstat mstat--mint"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 8h6"/></svg></span><p class="mstat__l">Chemistry</p><p class="mstat__v">58%</p><p class="mstat__d flat">4 chapters &middot; 8 tests</p></div></div>
+              <div class="mpanel">
+                <div class="mhead mhead--sm"><h4>Continue where you left off</h4><span class="mlink">All chapters</span></div>
+                <div class="mrow"><span class="mrow__a mrow__a--blue">M</span><span class="mrow__t"><b>Coordinate geometry</b><small>Mathematics &middot; Chapter 5</small></span><span class="mtag mtag--blue">Continue</span><span class="mrow__s">44%</span><span class="mrow__w">2/5 done</span></div><div class="mrow"><span class="mrow__a mrow__a--rose">P</span><span class="mrow__t"><b>Work, energy and power</b><small>Physics &middot; Chapter 3</small></span><span class="mtag mtag--blue">Continue</span><span class="mrow__s">66%</span><span class="mrow__w">3/5 done</span></div><div class="mrow"><span class="mrow__a mrow__a--mint">C</span><span class="mrow__t"><b>Acids, bases and salts</b><small>Chemistry &middot; Chapter 4</small></span><span class="mtag mtag--sun">Locked</span><span class="mrow__s">&mdash;</span><span class="mrow__w">Next up</span></div><div class="mrow"><span class="mrow__a mrow__a--sun">B</span><span class="mrow__t"><b>Heredity and evolution</b><small>Biology &middot; Chapter 7</small></span><span class="mtag mtag--blue">Continue</span><span class="mrow__s">38%</span><span class="mrow__w">1/4 done</span></div>
+              </div>
+            </div>
+            <aside class="appaside">
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Subject scores</h4><span class="mchip">Avg 74</span></div><div class="mbar"><span>Mathematics</span><i style="--v:92%;--c:#7C8DE7"></i><b>92</b></div><div class="mbar"><span>Physics</span><i style="--v:87%;--c:#9AA6F0"></i><b>87</b></div><div class="mbar"><span>Biology</span><i style="--v:71%;--c:#E0A82E"></i><b>71</b></div><div class="mbar"><span>Chemistry</span><i style="--v:58%;--c:#3F8F7B"></i><b>58</b></div></div>
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Chapters completed</h4><span class="mchip">18 of 24</span></div><div class="mbar"><span>Mathematics</span><i style="--v:80%;--c:#7C8DE7"></i><b>80</b></div><div class="mbar"><span>Physics</span><i style="--v:60%;--c:#9AA6F0"></i><b>60</b></div><div class="mbar"><span>Biology</span><i style="--v:50%;--c:#E0A82E"></i><b>50</b></div><div class="mbar"><span>Chemistry</span><i style="--v:25%;--c:#3F8F7B"></i><b>25</b></div></div>
+            </aside>
+          </div>
+          <div class="appbody" data-view-panel="tests" aria-hidden="true">
+            <div class="appcol">
+              <div class="mhead"><h4>Test performance</h4><span class="mchip">This term</span></div>
+              <div class="mstats"><div class="mstat mstat--blue"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></span><p class="mstat__l">Tests taken</p><p class="mstat__v">18</p><p class="mstat__d up">&#9650; 4 this month</p></div><div class="mstat mstat--mint"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span><p class="mstat__l">Average score</p><p class="mstat__v">87%</p><p class="mstat__d up">&#9650; 8.4% this month</p></div><div class="mstat mstat--sun"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3z"/></svg></span><p class="mstat__l">Best score</p><p class="mstat__v">96%</p><p class="mstat__d up">Physics &middot; Chapter 2</p></div><div class="mstat mstat--rose"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p class="mstat__l">Pending</p><p class="mstat__v">2 tests</p><p class="mstat__d flat">Due this week</p></div></div>
+              <div class="mpanel">
+                <div class="mhead mhead--sm"><h4>Recent tests</h4><span class="mlink">View all</span></div>
+                <div class="mrow"><span class="mrow__a mrow__a--blue">M</span><span class="mrow__t"><b>Quadratic equations</b><small>Chapter test &middot; 20 questions</small></span><span class="mtag mtag--mint">Passed</span><span class="mrow__s">88%</span><span class="mrow__w">Jun 09</span></div><div class="mrow"><span class="mrow__a mrow__a--rose">P</span><span class="mrow__t"><b>Motion and force</b><small>Chapter test &middot; 25 questions</small></span><span class="mtag mtag--mint">Passed</span><span class="mrow__s">96%</span><span class="mrow__w">Jun 02</span></div><div class="mrow"><span class="mrow__a mrow__a--mint">C</span><span class="mrow__t"><b>Chemical bonding</b><small>Topic test &middot; 15 questions</small></span><span class="mtag mtag--rose">Retake</span><span class="mrow__s">58%</span><span class="mrow__w">May 26</span></div><div class="mrow"><span class="mrow__a mrow__a--sun">B</span><span class="mrow__t"><b>Life processes</b><small>Chapter test &middot; 18 questions</small></span><span class="mtag mtag--mint">Passed</span><span class="mrow__s">78%</span><span class="mrow__w">May 19</span></div>
+              </div>
+            </div>
+            <aside class="appaside">
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Score trend</h4><span class="mchip">5 tests</span></div><div class="mchart">
+                  <svg viewBox="0 0 260 110" role="img" aria-label="Score trend rising to 87 percent">
+                    <defs><linearGradient id="mg2" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7C8DE7" stop-opacity=".28"/>
+                      <stop offset="100%" stop-color="#7C8DE7" stop-opacity="0"/></linearGradient></defs>
+                    <line class="mgrid" x1="0" y1="18" x2="260" y2="18"/>
+                    <line class="mgrid" x1="0" y1="52" x2="260" y2="52"/>
+                    <line class="mgrid" x1="0" y1="86" x2="260" y2="86"/>
+                    <path class="marea" style="fill:url(#mg2)" d="M8 82 L70 68 L132 72 L194 40 L252 22 L252 100 L8 100 Z"/>
+                    <path class="mline" d="M8 82 L70 68 L132 72 L194 40 L252 22"/>
+                    <circle class="mdot" cx="70" cy="68" r="3"/><circle class="mdot" cx="132" cy="72" r="3"/>
+                    <circle class="mdot" cx="194" cy="40" r="3"/><circle class="mdot mdot--last" cx="252" cy="22" r="4.5"/>
+                    <g class="mflag" transform="translate(206,2)"><rect width="46" height="20" rx="6"/>
+                      <text x="23" y="14">87%</text></g>
+                  </svg>
+                  <div class="mx"><span>May 12</span><span>May 26</span><span>Jun 09</span></div>
+                </div></div>
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Accuracy by subject</h4></div><div class="mbar"><span>Mathematics</span><i style="--v:88%;--c:#7C8DE7"></i><b>88</b></div><div class="mbar"><span>Physics</span><i style="--v:96%;--c:#9AA6F0"></i><b>96</b></div><div class="mbar"><span>Biology</span><i style="--v:78%;--c:#E0A82E"></i><b>78</b></div><div class="mbar"><span>Chemistry</span><i style="--v:58%;--c:#3F8F7B"></i><b>58</b></div></div>
+            </aside>
+          </div>
+          <div class="appbody" data-view-panel="analytics" aria-hidden="true">
+            <div class="appcol">
+              <div class="mhead"><h4>Learning analytics</h4><span class="mchip">Last 30 days</span></div>
+              <div class="mstats"><div class="mstat mstat--blue"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg></span><p class="mstat__l">Study time</p><p class="mstat__v">14h 20m</p><p class="mstat__d up">&#9650; 2h this month</p></div><div class="mstat mstat--mint"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span><p class="mstat__l">Accuracy</p><p class="mstat__v">87%</p><p class="mstat__d up">&#9650; 8.4% this month</p></div><div class="mstat mstat--sun"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></span><p class="mstat__l">Topics mastered</p><p class="mstat__v">31</p><p class="mstat__d up">&#9650; 6 this month</p></div><div class="mstat mstat--rose"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 5.5 6 9a6 6 0 0 1-12 0c0-2 1-3 2-4 .5 1.5 1.5 2 2 2 0-3 1-5 2-7z"/></svg></span><p class="mstat__l">Consistency</p><p class="mstat__v">82%</p><p class="mstat__d flat">23 of 28 days</p></div></div>
+              <div class="mpanel">
+                <div class="mhead mhead--sm"><h4>Score trend</h4><span class="mchip">Last 5 tests</span></div>
+                <div class="mchart">
+                  <svg viewBox="0 0 260 110" role="img" aria-label="Score trend rising to 87 percent">
+                    <defs><linearGradient id="mg3" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7C8DE7" stop-opacity=".28"/>
+                      <stop offset="100%" stop-color="#7C8DE7" stop-opacity="0"/></linearGradient></defs>
+                    <line class="mgrid" x1="0" y1="18" x2="260" y2="18"/>
+                    <line class="mgrid" x1="0" y1="52" x2="260" y2="52"/>
+                    <line class="mgrid" x1="0" y1="86" x2="260" y2="86"/>
+                    <path class="marea" style="fill:url(#mg3)" d="M8 82 L70 68 L132 72 L194 40 L252 22 L252 100 L8 100 Z"/>
+                    <path class="mline" d="M8 82 L70 68 L132 72 L194 40 L252 22"/>
+                    <circle class="mdot" cx="70" cy="68" r="3"/><circle class="mdot" cx="132" cy="72" r="3"/>
+                    <circle class="mdot" cx="194" cy="40" r="3"/><circle class="mdot mdot--last" cx="252" cy="22" r="4.5"/>
+                    <g class="mflag" transform="translate(206,2)"><rect width="46" height="20" rx="6"/>
+                      <text x="23" y="14">87%</text></g>
+                  </svg>
+                  <div class="mx"><span>May 12</span><span>May 26</span><span>Jun 09</span></div>
+                </div>
+              </div>
+            </div>
+            <aside class="appaside">
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Insights</h4></div>
+                <p class="mins"><i class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M9 12l2 2 4-4"/></svg></i> Accuracy improved by 8.4% this month</p>
+                <p class="mins"><i class="warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></i> Chemistry is your weakest subject</p>
+                <p class="mins"><i class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 5.5 6 9a6 6 0 0 1-12 0c0-2 1-3 2-4 .5 1.5 1.5 2 2 2 0-3 1-5 2-7z"/></svg></i> 23-day streak &mdash; four days to a record</p>
+              </div>
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Subject scores</h4><span class="mchip">Avg 74</span></div><div class="mbar"><span>Mathematics</span><i style="--v:92%;--c:#7C8DE7"></i><b>92</b></div><div class="mbar"><span>Physics</span><i style="--v:87%;--c:#9AA6F0"></i><b>87</b></div><div class="mbar"><span>Biology</span><i style="--v:71%;--c:#E0A82E"></i><b>71</b></div><div class="mbar"><span>Chemistry</span><i style="--v:58%;--c:#3F8F7B"></i><b>58</b></div></div>
+            </aside>
+          </div>
+          <div class="appbody" data-view-panel="benchmark" aria-hidden="true">
+            <div class="appcol">
+              <div class="mhead"><h4>Benchmark test</h4><span class="mchip">Next challenge</span></div>
+              <div class="mstats"><div class="mstat mstat--blue"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10v4a5 5 0 0 1-10 0z"/><path d="M7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3"/><path d="M12 13v4M9 21h6"/></svg></span><p class="mstat__l">Your rank</p><p class="mstat__v">#12</p><p class="mstat__d up">&#9650; 4 places</p></div><div class="mstat mstat--mint"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/></svg></span><p class="mstat__l">Benchmark score</p><p class="mstat__v">8.2k</p><p class="mstat__d up">&#9650; 340 this week</p></div><div class="mstat mstat--sun"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p class="mstat__l">Next test</p><p class="mstat__v">2 days</p><p class="mstat__d flat">Physics &middot; 90 questions</p></div><div class="mstat mstat--rose"><span class="mstat__i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3z"/></svg></span><p class="mstat__l">Badges earned</p><p class="mstat__v">12</p><p class="mstat__d up">&#9650; 3 this month</p></div></div>
+              <div class="mpanel">
+                <div class="mhead mhead--sm"><h4>Top learners this week</h4><span class="mlink">Full ranking</span></div>
+                <div class="mrow"><span class="mrow__a mrow__a--blue">P</span><span class="mrow__t"><b>Priya K.</b><small>Physics &middot; Board track</small></span><span class="mtag mtag--mint">Leading</span><span class="mrow__s">9.8k</span><span class="mrow__w">01</span></div><div class="mrow"><span class="mrow__a mrow__a--rose">R</span><span class="mrow__t"><b>Rohan M.</b><small>Mathematics &middot; Board track</small></span><span class="mtag mtag--blue">Rising</span><span class="mrow__s">9.1k</span><span class="mrow__w">02</span></div><div class="mrow"><span class="mrow__a mrow__a--sun">S</span><span class="mrow__t"><b>Sana T.</b><small>Biology &middot; Board track</small></span><span class="mtag mtag--sun">Steady</span><span class="mrow__s">8.7k</span><span class="mrow__w">03</span></div><div class="mrow"><span class="mrow__a mrow__a--mint">A</span><span class="mrow__t"><b>Aarav (you)</b><small>All subjects &middot; Board track</small></span><span class="mtag mtag--blue">You</span><span class="mrow__s">8.2k</span><span class="mrow__w">12</span></div>
+              </div>
+            </div>
+            <aside class="appaside">
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Score trend</h4><span class="mchip">5 tests</span></div><div class="mchart">
+                  <svg viewBox="0 0 260 110" role="img" aria-label="Score trend rising to 87 percent">
+                    <defs><linearGradient id="mg4" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#7C8DE7" stop-opacity=".28"/>
+                      <stop offset="100%" stop-color="#7C8DE7" stop-opacity="0"/></linearGradient></defs>
+                    <line class="mgrid" x1="0" y1="18" x2="260" y2="18"/>
+                    <line class="mgrid" x1="0" y1="52" x2="260" y2="52"/>
+                    <line class="mgrid" x1="0" y1="86" x2="260" y2="86"/>
+                    <path class="marea" style="fill:url(#mg4)" d="M8 82 L70 68 L132 72 L194 40 L252 22 L252 100 L8 100 Z"/>
+                    <path class="mline" d="M8 82 L70 68 L132 72 L194 40 L252 22"/>
+                    <circle class="mdot" cx="70" cy="68" r="3"/><circle class="mdot" cx="132" cy="72" r="3"/>
+                    <circle class="mdot" cx="194" cy="40" r="3"/><circle class="mdot mdot--last" cx="252" cy="22" r="4.5"/>
+                    <g class="mflag" transform="translate(206,2)"><rect width="46" height="20" rx="6"/>
+                      <text x="23" y="14">87%</text></g>
+                  </svg>
+                  <div class="mx"><span>May 12</span><span>May 26</span><span>Jun 09</span></div>
+                </div></div>
+              <div class="mpanel"><div class="mhead mhead--sm"><h4>Subject scores</h4><span class="mchip">Avg 74</span></div><div class="mbar"><span>Mathematics</span><i style="--v:92%;--c:#7C8DE7"></i><b>92</b></div><div class="mbar"><span>Physics</span><i style="--v:87%;--c:#9AA6F0"></i><b>87</b></div><div class="mbar"><span>Biology</span><i style="--v:71%;--c:#E0A82E"></i><b>71</b></div><div class="mbar"><span>Chemistry</span><i style="--v:58%;--c:#3F8F7B"></i><b>58</b></div></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LOOP STRIP ================= -->
+  <div class="strip">
+    <div class="container">
+      <div class="strip__in" data-reveal>
+        <span class="strip__w">Learn</span>
+        <span class="strip__w"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Practise</span>
+        <span class="strip__w"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Test</span>
+        <span class="strip__w"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Understand</span>
+        <span class="strip__w"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Improve</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 01 POINT OF VIEW ================= -->
+  <section class="section">
+    <div class="container duo">
+      <div data-reveal>
+        <p class="eyebrow">The Zerqo point of view</p>
+        <h2 class="duo__h">A score tells you what happened.<br><span class="em-brand">Zerqo</span> helps you decide what comes next.</h2>
+      </div>
+
+      <div data-reveal data-reveal-delay="90">
+        <p class="lead">
+          Students often move between videos, notes, question banks, and tests without a clear
+          connection between them. They may know their marks, but not the concepts behind their
+          mistakes or the most useful next step.
+        </p>
+        <p class="lead" style="margin-top:1.25rem">
+          Zerqo connects the full learning journey so every result becomes actionable.
+        </p>
+        <p style="margin-top:1.75rem">
+          <a class="tlink" href="#how">Explore the learning loop
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 02 THE LEARNING LOOP (dark) ================= -->
+  <section class="dark" id="how">
+    <div class="container duo">
+      <div data-reveal>
+        <p class="eyebrow">The learning loop</p>
+        <h2>Every study session <span class="em-coral">should move you forward.</span></h2>
+        <p class="muted" style="margin-top:1.5rem;max-width:38ch">
+          Learning, practice, and testing work better when they are part of the same path.
+        </p>
+      </div>
+
+      <div class="steps" data-reveal data-reveal-delay="90" data-stagger="90">
+        <article class="step">
+          <span class="step__n">01</span>
+          <span class="step__i" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 8h6M9 12h4"/></svg>
+          </span>
+          <div class="step__t">
+            <h3>Learn</h3>
+            <p>Understand concepts through structured, topic-wise lessons.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__n">02</span>
+          <span class="step__i" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><rect x="3" y="4" width="18" height="16" rx="3"/></svg>
+          </span>
+          <div class="step__t">
+            <h3>Practise</h3>
+            <p>Build confidence with questions that reinforce the topic.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__n">03</span>
+          <span class="step__i" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9M10 20V4M16 20v-7M22 20H2"/></svg>
+          </span>
+          <div class="step__t">
+            <h3>Test</h3>
+            <p>Check understanding through quizzes and meaningful assessments.</p>
+          </div>
+        </article>
+
+        <article class="step">
+          <span class="step__n">04</span>
+          <span class="step__i" aria-hidden="true">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </span>
+          <div class="step__t">
+            <h3>Improve</h3>
+            <p>Follow a focused next step based on your progress.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 03 FOUR CARDS ================= -->
+  <section class="section">
+    <div class="container">
+      <div style="max-width:640px;margin-bottom:clamp(2.5rem,5vw,3.5rem)" data-reveal>
+        <p class="eyebrow">Made for meaningful progress</p>
+        <h2>Not just more content.<br><span class="em">A clearer way to use it.</span></h2>
+        <p class="lead" style="margin-top:1.5rem">
+          Zerqo brings learning, practice, testing, feedback, and recommendations into one
+          connected academic experience.
+        </p>
+      </div>
+
+      <div class="cards" data-stagger="80">
+        <article class="card card--mint" data-reveal>
+          <span class="card__i" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H19v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M9 8h6"/></svg>
+          </span>
+          <h3>Learn by topic</h3>
+          <p>Move from subject to chapter to topic with a path that keeps your study organised.</p>
+        </article>
+
+        <article class="card card--blue" data-reveal>
+          <span class="card__i" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+          </span>
+          <h3>Practise with purpose</h3>
+          <p>Spend more time on the concepts that need attention, not on random repetition.</p>
+        </article>
+
+        <article class="card card--lime" data-reveal>
+          <span class="card__i" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-5 3 3 5-7"/></svg>
+          </span>
+          <h3>See the full picture</h3>
+          <p>Connect accuracy, activity, mastery, and learning progress in one view.</p>
+        </article>
+
+        <article class="card card--sun" data-reveal>
+          <span class="card__i" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v6l4 2"/><circle cx="12" cy="14" r="8"/></svg>
+          </span>
+          <h3>Know what comes next</h3>
+          <p>Turn every result into one clear recommendation for your next study action.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 04 FOR STUDENTS ================= -->
+  <section class="section" id="students">
+    <div class="container media">
+      <figure class="frame frame--photo" data-reveal>
+        <img src="assets/img1.webp" width="1920" height="1440" loading="lazy" decoding="async"
+             alt="A student working through maths problems in a notebook, a blue pencil resting alongside">
+        <figcaption class="frame__tag">
+          <h5>Focus area</h5>
+          <b>Quadratic equations</b>
+          <small>3 topics to revisit</small>
+        </figcaption>
+      </figure>
+
+      <div data-reveal data-reveal-delay="90">
+        <p class="eyebrow">For students</p>
+        <h2>Replace study confusion with <span class="em">a plan you can follow.</span></h2>
+        <p class="lead" style="margin-top:1.5rem">
+          See what you are learning, how you are performing, and what deserves attention next.
+          Zerqo keeps the focus on consistent improvement across the subjects that matter.
+        </p>
+
+        <ul class="checks">
+          <li><i aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 7"/></svg></i> Structured learning paths</li>
+          <li><i aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 7"/></svg></i> Topic-level practice and chapter tests</li>
+          <li><i aria-hidden="true"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 7"/></svg></i> One clear recommended next step</li>
+        </ul>
+
+        <a class="btn btn--ink" href="auth/signup.html" data-join>Build your learning path
+          <svg class="btn__a" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 06 PROGRESS ================= -->
+  <section class="section">
+    <div class="container media">
+      <div data-reveal>
+        <p class="eyebrow">Progress you can use</p>
+        <h2>Turn learning activity into <span class="em">a clearer academic picture.</span></h2>
+        <p class="lead" style="margin-top:1.5rem">
+          Bring together progress, test accuracy, topic performance, study consistency, and mastery
+          signals in one view. Celebrate what is improving. Focus on what still needs work.
+        </p>
+
+        <div class="note">
+          <b>Make the next step obvious.</b>
+          <p>Not every signal needs your attention. Zerqo helps surface the one that does.</p>
+        </div>
+      </div>
+
+      <div class="panel" data-reveal data-reveal-delay="90">
+        <div class="chart">
+          <div class="chart__h">
+            <div><h5>Score trend</h5><small>Last 5 tests</small></div>
+            <div class="chart__v"><b>87%</b><small>&#9650; 8.4%</small></div>
+          </div>
+
+          <svg viewBox="0 0 320 150" role="img" aria-label="Score trend rising over the last five tests to 87 percent">
+            <defs>
+              <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7C8DE7" stop-opacity=".3"/>
+                <stop offset="100%" stop-color="#7C8DE7" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <line class="cgrid" x1="0" y1="20" x2="320" y2="20"/>
+            <line class="cgrid" x1="0" y1="65" x2="320" y2="65"/>
+            <line class="cgrid" x1="0" y1="110" x2="320" y2="110"/>
+            <path class="cfill" d="M10 104 L85 88 L160 92 L235 52 L310 28 L310 130 L10 130 Z"/>
+            <path class="cline" d="M10 104 L85 88 L160 92 L235 52 L310 28"/>
+            <circle class="cdot" cx="10" cy="104" r="4"/>
+            <circle class="cdot" cx="85" cy="88" r="4"/>
+            <circle class="cdot" cx="160" cy="92" r="4"/>
+            <circle class="cdot" cx="235" cy="52" r="4"/>
+            <circle class="cdot" cx="310" cy="28" r="5.5"/>
+          </svg>
+
+          <div class="chart__x" aria-hidden="true">
+            <span>May 12</span><span>May 19</span><span>May 26</span><span>Jun 02</span><span>Jun 09</span>
+          </div>
+        </div>
+
+        <div class="minicards">
+          <div class="mini mini--dark"><h5>Mastery score</h5><b>4,250</b><small>+120 this week</small></div>
+          <div class="mini"><h5>Study streak</h5><b>23 days</b><small>personal best: 31</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 07 FOR PARENTS (coral) ================= -->
+  <section class="coral" id="parents">
+    <div class="container media">
+      <div data-reveal>
+        <p class="eyebrow">For parents</p>
+        <h2>More context.<br><span class="em">Better conversations.</span></h2>
+        <p class="lead" style="color:rgba(255,255,255,.92);margin-top:1.5rem">
+          Zerqo gives parents a more useful view of academic progress. Understand recent activity,
+          test performance, accuracy trends, and the topics that may need support.
+        </p>
+        <a class="btn btn--light" href="auth/signup.html" data-join style="margin-top:2rem">Understand their progress
+          <svg class="btn__a" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <figure class="frame" data-reveal data-reveal-delay="90">
+        <svg class="illus frame__art" viewBox="0 0 300 220" aria-label="A parent and student reviewing progress together">
+          <circle cx="96" cy="56" r="19"/>
+          <path d="M96 75c-17 0-28 13-28 30v52"/>
+          <path d="M82 48c3-10 15-13 20-5"/>
+          <circle cx="190" cy="68" r="16"/>
+          <path d="M190 84c-15 0-24 11-24 26v44"/>
+          <path d="M178 61c3-8 13-10 17-4"/>
+          <rect class="paper" x="110" y="110" width="78" height="54" rx="7"/>
+          <path d="M120 148l14-16 12 10 20-24"/>
+          <circle class="brandfill" cx="166" cy="118" r="4"/>
+          <path d="M68 160c14 6 30 8 46 6M166 166c14 2 26 0 36-4"/>
+          <path d="M36 194c76 16 156 16 232 0"/>
+        </svg>
+        <figcaption class="frame__tag">
+          <h5>Shared view</h5>
+          <b>Progress is a shared language.</b>
+          <small>Activity, accuracy and focus areas</small>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= 08 FAQ ================= -->
+  <section class="section" id="faq">
+    <div class="container faq">
+      <div data-reveal>
+        <p class="eyebrow">Questions, answered</p>
+        <h2>Start with <span class="em">clarity.</span></h2>
+        <p class="lead" style="margin-top:1.5rem">Everything you need to know before your first study session.</p>
+        <a class="btn btn--ink btn--sm" href="mailto:hello@zerqo.in" style="margin-top:1.75rem">Email us</a>
+      </div>
+
+      <div class="acc" data-reveal data-reveal-delay="90">
+        <div class="acc__i is-open">
+          <button class="acc__b" type="button" aria-expanded="true">What is Zerqo?<span class="acc__s" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="acc__p"><div><p>Zerqo is an academic improvement platform for Class 9 and Class 10 students. It combines topic-wise learning, practice, tests, performance feedback, analytics, and recommendations in one connected experience.</p></div></div>
+        </div>
+        <div class="acc__i">
+          <button class="acc__b" type="button" aria-expanded="false">Which subjects are available?<span class="acc__s" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="acc__p"><div><p>Mathematics, Physics, Chemistry and Biology &mdash; organised subject by subject, chapter by chapter, and topic by topic for Class 9 and Class 10.</p></div></div>
+        </div>
+        <div class="acc__i">
+          <button class="acc__b" type="button" aria-expanded="false">How does Zerqo help students improve?<span class="acc__s" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="acc__p"><div><p>Learning, practice and testing sit on the same path, so every result feeds back into what you study next. Instead of a score on its own, you get one clear recommended step.</p></div></div>
+        </div>
+        <div class="acc__i">
+          <button class="acc__b" type="button" aria-expanded="false">Can parents track progress?<span class="acc__s" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="acc__p"><div><p>Yes. Parents and teachers can see recent activity, test performance, accuracy trends and the topics that may need support &mdash; enough context for a better conversation.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= 09 FINAL CTA ================= -->
+  <section class="section" id="start">
+    <div class="container">
+      <div class="final" data-reveal>
+        <div>
+          <p class="eyebrow">Begin with one clear step</p>
+          <h2>Make your next study session <span class="em-coral">count.</span></h2>
+          <p>
+            Start with one subject, one chapter, or one topic. Zerqo helps turn that starting point
+            into a clearer learning path.
+          </p>
+          <div class="final__cta">
+            <a class="btn btn--light" href="auth/signup.html" data-join>Start learning with Zerqo
+              <svg class="btn__a" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="mailto:hello@zerqo.in">Talk to us</a>
+          </div>
+        </div>
+
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="circ" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+            <text><textPath href="#circ" startOffset="0%">LEARN WITH DIRECTION &middot; IMPROVE WITH EVIDENCE &middot; </textPath></text>
+          </svg>
+          <span class="badge__c">Z</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <a class="brand" href="#top"><span class="brand__m" aria-hidden="true">Z</span> zerqo</a>
+        <p class="footer__b">Learn with direction.<br>Improve with evidence.</p>
+      </div>
+
+      <div class="footer__cols">
+        <div class="footer__c">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#parents">For parents</a></li>
+          </ul>
+        </div>
+        <div class="footer__c">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="mailto:hello@zerqo.in">hello@zerqo.in</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bot">
+      <span>&copy; <span id="year">2026</span> Zerqo. Built for better learning.</span>
+      <span>Class 9 &amp; 10 &middot; Mathematics &middot; Physics &middot; Chemistry &middot; Biology</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ================= SIGN-UP MODAL ================= -->
+<div class="ov" id="signupOv" hidden>
+  <div class="ov__bg" data-close></div>
+
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetT">
+    <span class="sheet__bar" aria-hidden="true"><i></i></span>
+
+    <button class="sheet__x" type="button" data-close aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <!-- step 1 -->
+    <div class="sheet__step is-on" data-sheet="form">
+      <p class="sheet__eye"><i aria-hidden="true"></i> Student signup</p>
+
+      <h2 id="sheetT">Start with one<br><span>clear step.</span></h2>
+      <p class="sheet__sub">Tell us a little about yourself and we'll help you find the right place to begin.</p>
+
+      <form id="joinForm" novalidate>
+        <div class="fld">
+          <label>
+            <span>Student name</span>
+            <input type="text" name="name" autocomplete="name" placeholder="e.g. Aarav Mehta" required>
+          </label>
+        </div>
+        <p class="fld__err" data-err="name">Please enter the student's full name.</p>
+
+        <div class="fld">
+          <label>
+            <span>Email or phone number</span>
+            <input type="text" name="contact" autocomplete="email" placeholder="Where can we reach you?" required>
+          </label>
+        </div>
+        <p class="fld__err" data-err="contact">Enter a valid email address or 10-digit mobile number.</p>
+
+        <div class="fld fld--2">
+          <label>
+            <span>Class</span>
+            <select name="klass" required>
+              <option value="">Select class</option>
+              <option value="9">Class 9</option>
+              <option value="10">Class 10</option>
+            </select>
+          </label>
+          <label>
+            <span>Board</span>
+            <select name="board" required>
+              <option value="">Select board</option>
+              <option>CBSE</option>
+              <option>ICSE</option>
+              <option>State board</option>
+            </select>
+          </label>
+        </div>
+        <p class="fld__err" data-err="pick">Choose your class and board.</p>
+
+        <button class="sheet__go" type="submit">
+          Create my learning path
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+
+        <p class="sheet__legal">By continuing, you agree to Zerqo's <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+      </form>
+
+      <p class="sheet__swap">Already have an account? <a href="auth/login.html" data-signin>Sign in</a></p>
+    </div>
+
+    <!-- step 2 -->
+    <div class="sheet__step" data-sheet="done">
+      <p class="sheet__eye"><i aria-hidden="true"></i> You're in</p>
+      <h2>Your path is<br><span>ready.</span></h2>
+      <p class="sheet__sub" id="joinMsg">We've sent your sign-in code. Open it to start your first session.</p>
+
+      <a class="sheet__go" href="dashboard/index.html">
+        Go to my dashboard
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="sheet__swap"><button type="button" data-close>Back to the site</button></p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= SIGN-IN MODAL ================= -->
+<div class="ov" id="loginOv" hidden>
+  <div class="ov__bg" data-close></div>
+
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="liT">
+    <span class="sheet__bar" aria-hidden="true"><i id="liBar" style="width:34%"></i></span>
+
+    <button class="sheet__x" type="button" data-close aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+
+    <!-- step 1 -->
+    <div class="sheet__step is-on" data-sheet="ask">
+      <p class="sheet__eye"><i aria-hidden="true"></i> Student sign in</p>
+      <h2 id="liT">Pick up where<br><span>you left off.</span></h2>
+      <p class="sheet__sub">No password needed. We'll send a 6-digit code to your email or phone.</p>
+
+      <div class="lseg" role="tablist" aria-label="Send the code to">
+        <button class="on" type="button" data-mode="email" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg>
+          Email
+        </button>
+        <button type="button" data-mode="phone" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>
+          Phone
+        </button>
+      </div>
+
+      <form id="liAsk" novalidate>
+        <div class="fld" data-lfield="email">
+          <label>
+            <span>Email address</span>
+            <input type="email" name="email" autocomplete="email" inputmode="email" placeholder="Where can we reach you?">
+          </label>
+        </div>
+
+        <div class="fld" data-lfield="phone" hidden>
+          <label>
+            <span>Phone number</span>
+            <span class="lphone">
+              <span class="cc">+91</span>
+              <input type="tel" name="phone" autocomplete="tel-national" inputmode="numeric" maxlength="10" placeholder="98765 43210">
+            </span>
+          </label>
+        </div>
+
+        <p class="fld__err" data-err="liAsk">Enter a valid email address.</p>
+
+        <button class="sheet__go" type="submit">
+          Send my code
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+
+        <p class="sheet__legal">By continuing, you agree to Zerqo's <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+      </form>
+
+      <p class="sheet__swap">New to Zerqo? <button type="button" id="toJoin">Create an account</button></p>
+    </div>
+
+    <!-- step 2 -->
+    <div class="sheet__step" data-sheet="otp">
+      <p class="sheet__eye"><i aria-hidden="true"></i> Verify</p>
+      <h2>Enter your<br><span>6-digit code.</span></h2>
+      <p class="sheet__sub">It's valid for the next 10 minutes.</p>
+
+      <div class="lsent">
+        <span>Sent to <b id="liSentTo">aarav@example.com</b></span>
+        <button type="button" id="liChange">Change</button>
+      </div>
+
+      <form id="liVerify" novalidate>
+        <div class="lotp" id="liOtp" role="group" aria-label="6 digit code">
+          <input type="text" inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Digit 1">
+          <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 2">
+          <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 3">
+          <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 4">
+          <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 5">
+          <input type="text" inputmode="numeric" maxlength="1" aria-label="Digit 6">
+        </div>
+
+        <p class="fld__err" data-err="liOtp">Enter all six digits.</p>
+
+        <div class="lresend">
+          <span>Didn't get it?</span>
+          <button type="button" id="liResend" disabled>Resend in <span id="liTick">30</span>s</button>
+        </div>
+
+        <button class="sheet__go" type="submit">
+          Verify and continue
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- step 3 -->
+    <div class="sheet__step" data-sheet="done">
+      <p class="sheet__eye"><i aria-hidden="true"></i> Signed in</p>
+      <h2>Welcome back,<br><span>Aarav.</span></h2>
+      <p class="sheet__sub">Your streak is intact and your next step is waiting.</p>
+
+      <a class="sheet__go" href="dashboard/index.html">
+        Go to my dashboard
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="sheet__swap"><button type="button" data-close>Back to the site</button></p>
+    </div>
+  </div>
+</div>
+
+<script src="js/reveal.js" defer></script>
+<script src="js/app.js" defer></script>
+</body>
+</html>

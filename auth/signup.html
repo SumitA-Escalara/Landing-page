@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create your account — Zerqo</title>
+<meta name="description" content="Start with one clear step. Zerqo builds a learning path for Class 9 and Class 10 students.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<main class="sheet">
+  <span class="sheet__bar" aria-hidden="true"><i style="width:34%"></i></span>
+
+  <a class="sheet__x" href="../index.html" aria-label="Close and go back">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </a>
+
+  <!-- ---------------- step 1 ---------------- -->
+  <div class="step on" data-step="form">
+    <p class="sheet__eye"><i aria-hidden="true"></i> Student signup</p>
+
+    <h1>Start with one<br><span>clear step.</span></h1>
+    <p class="sheet__sub">Tell us a little about yourself and we'll help you find the right place to begin.</p>
+
+    <form id="signup" novalidate>
+      <div class="fld">
+        <label>
+          <span>Student name</span>
+          <input type="text" name="name" autocomplete="name" placeholder="e.g. Aarav Mehta" required>
+        </label>
+      </div>
+      <p class="fld__err" data-err="name">Please enter the student's full name.</p>
+
+      <div class="fld">
+        <label>
+          <span>Email or phone number</span>
+          <input type="text" name="contact" autocomplete="email" placeholder="Where can we reach you?" required>
+        </label>
+      </div>
+      <p class="fld__err" data-err="contact">Enter a valid email address or 10-digit mobile number.</p>
+
+      <div class="fld fld--2">
+        <label>
+          <span>Class</span>
+          <select name="klass" required>
+            <option value="">Select class</option>
+            <option value="9">Class 9</option>
+            <option value="10">Class 10</option>
+          </select>
+        </label>
+        <label>
+          <span>Board</span>
+          <select name="board" required>
+            <option value="">Select board</option>
+            <option>CBSE</option>
+            <option>ICSE</option>
+            <option>State board</option>
+          </select>
+        </label>
+      </div>
+      <p class="fld__err" data-err="pick">Choose your class and board.</p>
+
+      <button class="go" type="submit">
+        Create my learning path
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+
+      <p class="legal">By continuing, you agree to Zerqo's <a href="#">terms</a> and <a href="#">privacy policy</a>.</p>
+    </form>
+
+    <p class="swap">Already have an account? <a href="login.html">Sign in</a></p>
+  </div>
+
+  <!-- ---------------- step 2 ---------------- -->
+  <div class="step" data-step="done">
+    <span class="done__i"><svg viewBox="0 0 24 24"><path d="m4 12 5 5L20 7"/></svg></span>
+
+    <h1>Your path is<br><span>ready.</span></h1>
+    <p class="sheet__sub" id="doneMsg">We've sent your sign-in code. Open it to start your first session.</p>
+
+    <a class="go" href="../dashboard/index.html">
+      Go to my dashboard
+      <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <a class="go go--ghost" href="../index.html">Back to the site</a>
+  </div>
+</main>
+
+<script src="auth.js" defer></script>
+</body>
+</html>
